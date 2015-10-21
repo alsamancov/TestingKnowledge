@@ -1,5 +1,7 @@
 package com.spdukraine.mvc.entity;
 
+import org.springframework.transaction.annotation.Transactional;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -59,18 +61,22 @@ public class Question {
         this.level = level;
     }
 
+    @Transactional
     public List<Answer> getHisAnswers() {
         return hisAnswers;
     }
 
+    @Transactional
     public void setHisAnswers(List<Answer> hisAnswers) {
         this.hisAnswers = hisAnswers;
     }
 
+    @Transactional
     public List<Applicant> getApplicantList() {
         return applicantList;
     }
 
+    @Transactional
     public void setApplicantList(List<Applicant> applicantList) {
         this.applicantList = applicantList;
     }

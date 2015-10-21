@@ -17,10 +17,10 @@
         <th>4.</th>
 
       </tr>
-      <c:forEach items = "${questions}" var = "question">
+      <c:forEach items = "${question}" var = "question">
         <tr>
           <td>${question.textQuestion}</td>
-          <td>${question.hisAnswers.get(1).textAnswer}</td>
+
 
 
         </tr>
