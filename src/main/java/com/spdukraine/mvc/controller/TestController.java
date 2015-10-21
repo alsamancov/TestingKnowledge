@@ -30,9 +30,9 @@ public class TestController {
     }
 
     @RequestMapping(value="/test", method = RequestMethod.GET)
-    public String getQuestions(Model model){
-        List<Question> questions = this.questionService.getAllQuestion();
-        model.addAttribute("questions", questions);
+    public String getQuestion(Model model){
+        Question question = this.questionService.findQuestionById(1);
+        model.addAttribute("question", question);
         return "test";
     }
 
